@@ -34,7 +34,7 @@
 ### END INIT INFO
 
 prog="guacd"
-exec="/opt/galax/guacamole/sbin/$prog"
+exec="/usr/sbin/$prog"
 pidfile="/var/run/$prog.pid"
 
 # Returns PID of currently running process, if any
