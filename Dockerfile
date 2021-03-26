@@ -1,6 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-ubuntu:focal as builder
 
-ARG GUACD_VERSION=1.2.0
+ARG GUACD_VERSION=1.3.0
 
 COPY /buildroot /
 
@@ -70,7 +70,7 @@ FROM ghcr.io/linuxserver/baseimage-ubuntu:focal
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION=1.2.0
+ARG GUACD_VERSION=1.3.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Thelamer"
 
@@ -88,6 +88,7 @@ RUN \
 	fonts-dejavu \
 	ghostscript \
 	xfonts-terminus \
+	fonts-wqy-zenhei \
 	$(cat /tmp/out/DEPENDENCIES) && \
  echo "**** clean up ****" && \
  rm -rf \
